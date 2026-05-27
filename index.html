@@ -723,11 +723,13 @@ footer{background:var(--ink);padding:26px clamp(20px,5vw,80px)}
       <p style="font-size:.98rem;color:var(--ink-mid);margin-top:12px;max-width:420px">15 minut wystarczy żeby ocenić czy automatyzacja ma sens. Bezpłatnie, bez zobowiązań.</p>
     </div>
     <div class="ct-g">
-      <form class="cf rv" onsubmit="sendForm(event)">
-        <div class="fi"><label for="fn">Imię</label><input type="text" id="fn" placeholder="Jak się nazywasz?" required></div>
-        <div class="fi"><label for="fe">Email lub telefon</label><input type="text" id="fe" placeholder="Jak się odezwać?" required></div>
-        <div class="fi"><label for="fb">Branża</label><input type="text" id="fb" placeholder="np. sklep online, usługi..."></div>
-        <div class="fi"><label for="fm">Co zabiera Ci najwięcej czasu?</label><textarea id="fm" placeholder="Opisz krótko..."></textarea></div>
+      <form class="cf rv" action="https://formspree.io/f/xykvlddn" method="POST">
+        <div class="fi"><label for="fn">Imię</label><input type="hidden" name="_subject" value="Nowa wiadomość z aiona.com.pl">
+        <input type="hidden" name="_next" value="https://aiona.com.pl">
+        <input type="text" id="fn" name="imie" placeholder="Jak się nazywasz?" required></div>
+        <div class="fi"><label for="fe">Email lub telefon</label><input type="text" id="fe" name="kontakt" placeholder="Jak się odezwać?" required></div>
+        <div class="fi"><label for="fb">Branża</label><input type="text" id="fb" name="branza" placeholder="np. sklep online, usługi..."></div>
+        <div class="fi"><label for="fm">Co zabiera Ci najwięcej czasu?</label><textarea id="fm" name="wiadomosc" placeholder="Opisz krótko..."></textarea></div>
         <button type="submit" class="btn-p" style="align-self:flex-start;border:none;cursor:pointer">
           Wyślij wiadomość
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22,2 15,22 11,13 2,9"/></svg>
