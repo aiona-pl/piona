@@ -738,11 +738,11 @@ footer{background:var(--ink);padding:26px clamp(20px,5vw,80px)}
         <div class="fi"><label for="fe">Email lub telefon</label><input type="text" id="fe" name="kontakt" placeholder="Jak się odezwać?" required></div>
         <div class="fi"><label for="fb">Branża</label><input type="text" id="fb" name="branza" placeholder="np. sklep online, usługi..."></div>
         <div class="fi"><label for="fm">Co zabiera Ci najwięcej czasu?</label><textarea id="fm" name="wiadomosc" placeholder="Opisz krótko..."></textarea></div>
-        <button type="submit" class="btn-p" style="align-self:flex-start;border:none;cursor:pointer">
+        <button type="button" onclick="submitForm()" class="btn-p" style="align-self:flex-start;border:none;cursor:pointer">
           Wyślij wiadomość
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22,2 15,22 11,13 2,9"/></svg>
         </button>
-        <p id="form-ok">✓ Gotowe — odezwiemy się w ciągu 2 dni roboczych.</p>
+        <p id="form-ok" style="display:none;font-size:.83rem;color:#059669;padding:8px 0">✓ Wiadomość wysłana — odezwiemy się w ciągu 2 dni roboczych.</p>
         <p style="font-size:.72rem;color:var(--ink-soft);margin-top:8px">Wysyłając wiadomość akceptujesz <a href="polityka.html" style="color:var(--purple)">politykę prywatności</a>.</p>
       </form>
       <div class="ca rv">
@@ -840,7 +840,33 @@ const btt=document.getElementById('btt');
 window.addEventListener('scroll',()=>btt.classList.toggle('show',scrollY>400),{passive:true});
 
 // Form
-function sendForm(e){e.preventDefault();document.getElementById('form-ok').style.display='block';e.target.reset();}
+async function submitForm(){
+  const form = document.getElementById('contactForm');
+  const data = new FormData(form);
+  const btn = form.querySelector('button');
+  btn.disabled = true;
+  btn.textContent = 'Wysyłanie...';
+  try {
+    const res = await fetch('https://formspree.io/f/xykvlddn', {
+      method: 'POST',
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    });
+    if(res.ok){
+      document.getElementById('form-ok').style.display = 'block';
+      form.reset();
+      btn.textContent = 'Wysłano ✓';
+    } else {
+      btn.disabled = false;
+      btn.textContent = 'Wyślij wiadomość';
+      alert('Coś poszło nie tak — napisz bezpośrednio na kontakt@aiona.com.pl');
+    }
+  } catch(e){
+    btn.disabled = false;
+    btn.textContent = 'Wyślij wiadomość';
+    alert('Błąd połączenia — napisz bezpośrednio na kontakt@aiona.com.pl');
+  }
+}
 </script>
 </body>
 </html>
