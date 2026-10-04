@@ -1,0 +1,26 @@
+# aiona.com.pl — robots.txt (runda B, 4.10.2026)
+# Wszystkie strony publiczne są dostępne dla wyszukiwarek i botów AI.
+# Boty wymienione z nazwy, żeby nie było wątpliwości przy walidacji reklam (OAI-AdsBot) i wyszukiwaniu w AI.
+
+User-agent: OAI-AdsBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: *
+Allow: /
+
+Sitemap: https://aiona.com.pl/sitemap.xml
