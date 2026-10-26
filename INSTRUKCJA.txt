@@ -1,0 +1,30 @@
+PACZKA STRONY AIONA (26.10.2026, wersja 3)
+
+WGRAJ DO GŁÓWNEGO FOLDERU REPOZYTORIUM (obok index.html, zastąp istniejące):
+  Strony:   index.html, aiona-reklama-chatgpt.html, sklepy.html,
+            automatyzacja-procesow.html, wiedza.html, polityka.html, regulamin.html
+  Ikona:    favicon.ico, favicon.svg, favicon-192.png, apple-touch-icon.png
+  Obrazki do udostępnień: og-image.jpg, og-image-chatgpt-ads.jpg, og-sklepy.jpg,
+            og-automatyzacja.jpg, og-wiedza.jpg
+  Mapa:     sitemap.xml
+
+Nowe w wersji 3: grubsze logo (kreska 12) z większą kropką, ikona (białe „A” na gradiencie fioletowym).
+W regulaminie zmieniła się tylko ikona w nagłówku strony (treść bez zmian).
+
+NIE RUSZAJ: cookie-consent.js, robots.txt, rekomendacje.pdf, CNAME (jeśli jest)
+NIE WGRYWAJ: pozycjonowanie-w-ai.html (archiwum). Jeśli jest na serwerze, usuń go.
+
+PO WGRANIU (ok. 15 minut):
+  1. Chrome: Cmd+Shift+R na aiona.com.pl. Ikona Aiony w karcie (czasem dopiero po zamknięciu karty).
+  2. Podgląd linku: developers.facebook.com/tools/debug → wklej adres → „Scrape again”.
+  3. Search Console: strona główna → „Poproś o zindeksowanie”.
+  4. Zapisz się do newslettera drugim mailem: mail powitalny, powiadomienie na kontakt@,
+     wiersz w arkuszu „Newsletter”.
+  5. W Make/Gmailu zmień filtry „[PŁATNE 390 zł]” na „[PŁATNE 560 zł]”.
+  6. Kliknij „Ustawienia cookies” w stopce polityki: powinno otworzyć się okno zgód.
+
+AWATARY I TŁA (nie do repozytorium, wgrywasz ręcznie):
+  LinkedIn logo:              aiona-avatar-LinkedIn-400.png
+  LinkedIn zdjęcie w tle:     li-baner-jasny-4200x700.png (albo ciemny)
+  Facebook zdjęcie profilowe: aiona-avatar-Facebook-720.png
+  Facebook zdjęcie w tle:     fb-zdjecie-w-tle-jasne-1640x856.png (albo ciemne)
