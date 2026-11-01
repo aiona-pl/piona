@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<!-- Zgody na cookies: skrypty pomiarowe (GTM/GA4, piksel OpenAI, piksel Meta) ładują się dopiero po zgodzie. Patrz cookie-consent.js -->
+<script>window.AIONA_CONSENT={gtm:'GTM-TG4C2SJM',openai:'BJ7rwHM981KLVcLzKrg3NM',meta:'1847432576607388'};</script>
+<script src="cookie-consent.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>E-commerce: czy AI poleca produkty z Twojego sklepu? | Aiona</title>
+<meta name="description" content="Sprawdzamy, czy ChatGPT, Perplexity i Gemini wskazują Twój sklep i podają dobrą cenę. Raport 10 produktów z przyczynami i listą poprawek: 560 zł, 3 dni robocze albo zwrot.">
+<link rel="canonical" href="https://aiona.com.pl/sklepy.html">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="author" content="Aiona">
+<meta name="theme-color" content="#171227">
+<meta name="format-detection" content="telephone=no,date=no,address=no">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Aiona">
+<meta property="og:locale" content="pl_PL">
+<meta property="og:title" content="Czy AI poleca produkty z Twojego sklepu?">
+<meta property="og:description" content="Sprawdzamy, czy AI znajduje Twoje produkty i czy pokazuje aktualną cenę i dostępność. Raport w 3 dni robocze albo zwrot.">
+<meta property="og:url" content="https://aiona.com.pl/sklepy.html">
+<meta property="og:image" content="https://aiona.com.pl/og-sklepy.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Raport dla sklepu internetowego: czy AI znajduje produkty i aktualne ceny",
+  "serviceType": "Audyt widoczności produktów w odpowiedziach AI",
+  "areaServed": "PL",
+  "url": "https://aiona.com.pl/sklepy.html",
+  "provider": { "@type": "Organization", "@id": "https://aiona.com.pl/#org", "name": "Aiona", "alternateName": ["AIona", "AI ona"], "url": "https://aiona.com.pl/" },
+  "offers": { "@type": "Offer", "price": "560", "priceCurrency": "PLN", "description": "Jednorazowo. Raport w 3 dni robocze od zamówienia albo zwrot 560 zł." }
+}
+</script>
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#14102A;--ink2:#4A4466;--ink3:#7A7495;--amber:#F2A93B;--orange:#FF8A3D;--vio:#7C5CFC;--vio2:#B9A6FF;--line:#ECE8F8;
+--disp:'ClashDisplay','Inter',system-ui,sans-serif;--body:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif}
+*{box-sizing:border-box}
+html,body{overflow-x:hidden}
+body{margin:0;font:400 17px/1.65 var(--body);color:var(--ink);background:#fff;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--amber);outline-offset:2px}
+.w{max-width:1120px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--disp);letter-spacing:-.02em;margin:0;font-weight:600}
+p{margin:0 0 14px}
+.btn{display:inline-flex;align-items:center;justify-content:center;font:600 16px/1 var(--body);padding:17px 28px;border-radius:14px;text-decoration:none;border:0;cursor:pointer;transition:transform .15s,box-shadow .15s}
+.btn-a{background:linear-gradient(135deg,#F7B84F,#FF8A3D);color:#1A1000;box-shadow:0 10px 30px rgba(255,138,61,.35),inset 0 1px 0 rgba(255,255,255,.5)}
+.btn-a:hover{transform:translateY(-2px);box-shadow:0 14px 34px rgba(255,138,61,.45),inset 0 1px 0 rgba(255,255,255,.5)}
+.grad{background:linear-gradient(90deg,#FFC66B,#FF8A3D);-webkit-background-clip:text;background-clip:text;color:transparent}
+.more{display:inline-block;margin-top:14px;font-weight:600;color:var(--vio);text-decoration:none;border-bottom:1px solid rgba(124,92,252,.3);padding-bottom:2px}
+.more:hover{border-color:var(--vio)}
+/* header */
+.top{position:sticky;top:0;z-index:20;background:rgba(14,10,31,.82);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.06)}
+.top .w{display:flex;align-items:center;justify-content:space-between;padding-top:14px;padding-bottom:14px}
+.logo{font:700 22px/1 var(--disp);color:#fff;text-decoration:none}.logo span{color:#9B82FF}
+.top nav{display:flex;gap:26px;align-items:center;font-size:15px}
+.top nav a{color:#C7C2DB;text-decoration:none}.top nav a:hover{color:#fff}
+.top nav .btn{padding:11px 18px;color:#1A1000}
+/* hero */
+.hero{position:relative;overflow:hidden;background:radial-gradient(800px 500px at 78% 30%,rgba(124,92,252,.45),transparent 60%),radial-gradient(600px 400px at 95% 90%,rgba(255,138,61,.22),transparent 60%),linear-gradient(180deg,#0E0A1F,#171227);color:#fff;padding:100px 0 110px}
+.hero .w{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center}
+.hero h1{font-size:clamp(38px,5.4vw,58px);line-height:1.04}
+.hero .lead{color:#CFC9E6;font-size:20px;max-width:30em;margin:22px 0 32px}
+.hero .alt{display:inline-block;margin-left:20px;color:#C7C2DB;font-size:15px}
+.meta{margin-top:20px;color:#9F98BD;font-size:15px}.meta b{color:#fff;font-weight:600}
+.scene{position:relative;height:440px;perspective:1000px}
+.floor{position:absolute;left:5%;right:5%;bottom:30px;height:120px;background:radial-gradient(closest-side,rgba(185,166,255,.35),transparent 70%);filter:blur(6px);transform:rotateX(75deg)}
+.cube{position:absolute;left:50%;top:44%;width:190px;height:190px;transform-style:preserve-3d;transform:translate(-50%,-50%) rotateX(-22deg) rotateY(38deg);animation:float 7s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translate(-50%,-50%) rotateX(-22deg) rotateY(38deg)}50%{transform:translate(-50%,-56%) rotateX(-18deg) rotateY(44deg)}}
+.f{position:absolute;inset:0;border-radius:18px;border:1px solid rgba(255,255,255,.35);background:linear-gradient(135deg,rgba(255,255,255,.28),rgba(124,92,252,.18) 50%,rgba(255,138,61,.20));box-shadow:inset 0 0 40px rgba(185,166,255,.35)}
+.f1{transform:translateZ(95px)}.f2{transform:rotateY(180deg) translateZ(95px)}.f3{transform:rotateY(90deg) translateZ(95px)}.f4{transform:rotateY(-90deg) translateZ(95px)}.f5{transform:rotateX(90deg) translateZ(95px);background:linear-gradient(135deg,rgba(255,255,255,.45),rgba(185,166,255,.25))}.f6{transform:rotateX(-90deg) translateZ(95px)}
+.f1 span{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font:700 64px/1 var(--disp);color:#fff;text-shadow:0 0 30px rgba(185,166,255,.9)}
+.orb{position:absolute;border-radius:50%;background:radial-gradient(circle at 32% 28%,#fff 0,rgba(255,255,255,.9) 6%,#FFC66B 22%,#FF8A3D 55%,#B5461A 100%);box-shadow:0 20px 40px rgba(255,138,61,.35)}
+.orb.v{background:radial-gradient(circle at 32% 28%,#fff 0,rgba(255,255,255,.9) 6%,#C9B8FF 22%,#7C5CFC 58%,#3A2490 100%);box-shadow:0 20px 40px rgba(124,92,252,.4)}
+.o1{width:78px;height:78px;right:8%;top:8%}.o2{width:46px;height:46px;left:10%;top:22%}.o3{width:110px;height:110px;left:4%;bottom:70px}
+.reflect{-webkit-box-reflect:below 8px linear-gradient(transparent 55%,rgba(255,255,255,.22))}
+/* sections */
+.sec{padding:110px 0}
+.sec.alt{background:#FBFAFF}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.row.rev .ill{order:2}
+.num{font:600 14px/1 var(--body);color:var(--vio);letter-spacing:.08em}
+.sec h2{font-size:clamp(32px,4vw,44px);line-height:1.08;margin:12px 0 14px}
+.sec .lead{font-size:20px;color:var(--ink2);margin:0 0 18px}
+ul.pts{list-style:none;margin:0;padding:0}
+ul.pts li{position:relative;padding:9px 0 9px 30px;color:var(--ink2)}
+ul.pts li::before{content:"";position:absolute;left:0;top:17px;width:12px;height:12px;border-radius:50%;background:linear-gradient(135deg,#FFC66B,#FF8A3D);box-shadow:0 3px 8px rgba(255,138,61,.4)}
+.ill{position:relative;height:420px;border-radius:28px;overflow:hidden;background:radial-gradient(500px 300px at 50% 35%,rgba(124,92,252,.20),transparent 70%),linear-gradient(180deg,#F6F3FF,#ECE7FB)}
+.ill.vid{height:auto;padding:14px;background:linear-gradient(180deg,#F6F3FF,#ECE7FB)}
+.ill.vid video{width:100%;height:auto;display:block;border-radius:18px;box-shadow:0 24px 50px rgba(58,36,144,.18)}
+.ill.vid figcaption{font-size:13px;color:var(--ink3);padding:10px 6px 2px}
+.lens{position:absolute;left:50%;top:44%;width:210px;height:210px;transform:translate(-50%,-50%);border-radius:50%;background:radial-gradient(circle at 35% 30%,rgba(255,255,255,.95) 0,rgba(255,255,255,.4) 18%,rgba(124,92,252,.35) 55%,rgba(58,36,144,.75) 100%);box-shadow:0 30px 60px rgba(58,36,144,.35),inset 0 0 0 2px rgba(255,255,255,.6)}
+.ring{position:absolute;left:50%;top:44%;width:300px;height:300px;transform:translate(-50%,-50%) rotateX(70deg);border-radius:50%;border:2px solid rgba(124,92,252,.35);box-shadow:0 0 30px rgba(124,92,252,.25)}
+.glass{position:absolute;padding:22px;border-radius:20px;background:linear-gradient(135deg,rgba(255,255,255,.88),rgba(255,255,255,.5));border:1px solid rgba(255,255,255,.95);box-shadow:0 24px 50px rgba(58,36,144,.18);backdrop-filter:blur(10px)}
+.tag{width:210px}
+.tag small{display:block;font-size:13px;color:var(--ink2);margin-bottom:6px}
+.tag b{font:600 40px/1 var(--disp)}
+.t1{left:12%;top:20%;transform:rotate(-6deg)}.t1 b{color:#7A7495;text-decoration:line-through;text-decoration-thickness:3px}
+.t2{right:12%;top:44%;transform:rotate(5deg)}.t2 b{background:linear-gradient(90deg,#F7B84F,#FF8A3D);-webkit-background-clip:text;background-clip:text;color:transparent}
+.check{left:50%;top:46%;width:300px;transform:translate(-50%,-50%) rotate(-3deg)}
+.check h4{margin:0 0 12px;font:600 15px/1 var(--body);color:var(--ink3)}
+.ck{display:flex;align-items:center;gap:12px;padding:10px 0;border-top:1px solid rgba(124,92,252,.12);font-weight:600;font-size:15px}
+.ck:first-of-type{border-top:0}
+.ck i{flex:0 0 auto;width:24px;height:24px;border-radius:50%;background:linear-gradient(135deg,#FFC66B,#FF8A3D);box-shadow:0 4px 10px rgba(255,138,61,.4);position:relative}
+.ck i::after{content:"";position:absolute;left:8px;top:5px;width:6px;height:11px;border:solid #fff;border-width:0 2.5px 2.5px 0;transform:rotate(45deg)}
+.check .o3{width:70px;height:70px;left:auto;right:-30px;bottom:-34px}
+/* trust */
+.trust{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:40px}
+.tc{border-radius:22px;padding:28px;background:linear-gradient(160deg,#FFFFFF,#F6F3FF);border:1px solid #EFEAFB;box-shadow:0 14px 34px rgba(58,36,144,.08)}
+.tc .orb{position:relative;display:block;width:38px;height:38px;margin-bottom:18px}
+.tc h3{font-size:22px;margin-bottom:8px}
+.tc p{color:var(--ink2);margin:0}
+/* offer */
+.offer{position:relative;overflow:hidden;background:radial-gradient(700px 420px at 15% 20%,rgba(124,92,252,.35),transparent 60%),radial-gradient(600px 400px at 90% 100%,rgba(255,138,61,.20),transparent 60%),#120D26;color:#D9D4EC;padding:110px 0}
+.offer .row{align-items:start}
+.offer h2{color:#fff;font-size:clamp(34px,4.4vw,48px);line-height:1.06;margin:12px 0 10px}
+.offer .num{color:#B9A6FF}
+.price{font:600 64px/1 var(--disp);margin:14px 0 6px}
+.price small{font:400 16px var(--body);color:#9F98BD;margin-left:8px}
+.offer ul.pts li{color:#E7E3F5}
+.gw{margin-top:18px;color:#fff;font-weight:600}
+.offer .fine{color:#9F98BD;font-size:14px;margin-top:10px}
+.form{background:linear-gradient(160deg,rgba(255,255,255,.98),rgba(255,255,255,.92));color:var(--ink);border-radius:24px;padding:30px;box-shadow:0 30px 70px rgba(0,0,0,.35)}
+.fi{display:flex;flex-direction:column;gap:6px;margin-bottom:12px}
+.fi label{font-size:14px;font-weight:600}
+.fi input,.fi select,.fi textarea{width:100%;background:#FBFAFF;border:1px solid #E2DDF2;border-radius:12px;padding:13px 14px;font:inherit;font-size:16px;color:var(--ink)}
+.fi input:focus,.fi select:focus,.fi textarea:focus{outline:0;border-color:var(--vio);box-shadow:0 0 0 4px rgba(124,92,252,.14);background:#fff}
+.fi textarea{min-height:72px;resize:vertical}
+.form .btn{width:100%}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.sent{display:none;color:#178A4C;font-weight:600;margin:12px 0 0}
+.err{color:#C0392B;font-size:14px;min-height:1em;margin:8px 0 0}
+.fine2{font-size:13px;color:var(--ink3);margin:10px 0 0}
+details.free{margin-top:20px;border-top:1px solid #EEEAF8;padding-top:16px}
+details.free summary{cursor:pointer;font-weight:600;color:var(--ink2)}
+details.free .fi:first-of-type{margin-top:14px}
+.btn-s{background:#F3F0FF;color:var(--ink);width:100%}
+/* faq */
+.faq{max-width:none;text-align:left}
+.faq summary{text-align:left}
+.faq details{border-bottom:1px solid var(--line);padding:20px 0}
+.faq details:first-of-type{border-top:1px solid var(--line)}
+.faq summary{cursor:pointer;font:600 19px/1.35 var(--disp);list-style:none;display:block;position:relative;padding-right:40px;text-align:left!important}
+.faq summary::after{content:"+";position:absolute;right:4px;top:0;color:var(--vio);font-weight:400}
+.faq summary::-webkit-details-marker{display:none}
+#pytania,#pytania *{text-align:left!important}
+.faq details[open] summary::after{content:"–"}
+.faq details p{margin:10px 0 0;color:var(--ink2)}
+footer{background:#0E0A1F;color:#8B84A8;padding:34px 0 44px;font-size:14px}
+footer .ft{display:flex;flex-wrap:wrap;gap:8px 22px;margin-bottom:12px}
+footer a{color:#C7C2DB;text-decoration:none}
+footer p{margin:6px 0 0}
+@media (max-width:900px){
+ .hero{padding:56px 0 40px}.hero .w,.row{grid-template-columns:1fr;gap:28px}
+ .row.rev .ill{order:0}
+ .scene{height:300px}.cube{width:140px;height:140px}.f1,.f2,.f3,.f4,.f5,.f6{}
+ .f1{transform:translateZ(70px)}.f2{transform:rotateY(180deg) translateZ(70px)}.f3{transform:rotateY(90deg) translateZ(70px)}.f4{transform:rotateY(-90deg) translateZ(70px)}.f5{transform:rotateX(90deg) translateZ(70px)}.f6{transform:rotateX(-90deg) translateZ(70px)}
+ .f1 span{font-size:48px}
+ .sec,.offer{padding:60px 0}
+ .ill{height:300px}
+ .lens{width:150px;height:150px}.ring{width:220px;height:220px}
+ .tag{width:170px;padding:16px}.tag b{font-size:32px}.t1{left:6%}.t2{right:6%}
+ .check{width:260px}
+ .trust{grid-template-columns:1fr}
+ .price{font-size:52px}
+ .top nav a:not(.btn){display:none}
+ .hero .alt{display:block;margin:16px 0 0}
+ .hero .btn{width:100%}
+}
+@media (prefers-reduced-motion:reduce){.cube{animation:none}}
+
+/* 24.10: biały pasek z logo, jak na stronie głównej */
+.top{background:#fff;border-bottom:1px solid #ECE8F8;-webkit-backdrop-filter:none;backdrop-filter:none}
+.logo{display:inline-flex;align-items:center;color:#171227}.logo-svg{height:22px;width:auto;display:block}
+.top nav{gap:24px}
+.top nav a{color:#4A4466;white-space:nowrap}.top nav a:hover,.top nav a[aria-current]{color:#14102A}
+.top nav a[aria-current]{font-weight:600}
+@media (max-width:1060px){.top nav a:not(.btn){display:none}}
+
+/* 24.10: wielkości czcionek jak na pozostałych stronach (strona główna, reklama) */
+html{font-size:15.67px}
+body{font-size:15.67px;line-height:1.6}
+.eyb{display:inline-flex;align-items:center;gap:10px;font:600 .8rem/1 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--amber);margin-bottom:18px}
+.eyb::before{content:"";width:22px;height:1px;background:var(--amber)}
+h1,h2,h3{font-weight:800;letter-spacing:-.03em}
+.hero{padding:84px 0 88px}
+.hero h1{font-size:clamp(2.1rem,4.1vw,3.3rem);line-height:1.1}
+.hero .lead{font-size:1.2rem;margin:20px 0 30px}
+.meta{font-size:.95rem}
+.sec,.offer{padding:84px 0}
+.sec h2,.offer h2{font-size:clamp(1.75rem,3.2vw,2.5rem);line-height:1.1}
+.sec .lead{font-size:1.1rem}
+ul.pts li{font-size:1rem;padding:7px 0 7px 28px}
+ul.pts li::before{top:14px;width:10px;height:10px}
+.num{font-size:.8rem}
+.price{font-size:2.6rem}
+.tc h3{font-size:1.25rem}.tc p{font-size:1rem}
+.faq summary{font-size:1.07rem}
+.faq details p{font-size:1rem}
+.btn{font-size:.98rem;padding:15px 24px}
+.top nav{font-size:.92rem}
+.more{font-size:1rem}
+.ill{height:380px}
+@media (max-width:900px){.hero{padding:48px 0 40px}.sec,.offer{padding:56px 0}.price{font-size:2.3rem}.ill{height:300px}}
+
+
+
+.ill{background:radial-gradient(120% 90% at 0% 0%,#DCD3FF 0%,rgba(220,211,255,0) 60%),radial-gradient(110% 90% at 100% 100%,#D3E1FF 0%,rgba(211,225,255,0) 58%),#EFEBFF}
+.ai-stage{position:absolute;inset:0;display:flex;align-items:center;justify-content:center}
+.ai-orb{position:relative;width:230px;height:230px;border-radius:50%;overflow:hidden;isolation:isolate;box-shadow:0 36px 70px -28px rgba(42,27,110,.55)}
+.ai-orb i{position:absolute;display:block}
+.ai-orb .sky{inset:-60% 0;background:linear-gradient(180deg,#2A1B6E 0%,#3B2A8C 16%,#4A35A0 30%,#7C5CFC 48%,#9B82FF 60%,#C9BCFF 74%,#ECE8FF 88%,#3B2A8C 100%);animation:aiSky 16s ease-in-out infinite alternate}
+.ai-orb .c1,.ai-orb .c2,.ai-orb .c3{border-radius:50%;filter:blur(16px)}
+.ai-orb .c1{width:260px;height:70px;top:96px;left:-60px;background:rgba(255,255,255,.75);animation:aiCloud 10s ease-in-out infinite alternate}
+.ai-orb .c2{width:200px;height:60px;top:134px;right:-70px;background:rgba(233,227,255,.9);animation:aiCloud 13s ease-in-out infinite alternate-reverse}
+.ai-orb .c3{width:170px;height:50px;top:58px;left:-20px;background:rgba(155,130,255,.7);animation:aiCloud 15s ease-in-out infinite alternate}
+.ai-orb .hl{width:150px;height:150px;top:-40px;right:-40px;border-radius:50%;background:radial-gradient(closest-side,rgba(255,255,255,.55),rgba(255,255,255,0));filter:blur(6px)}
+.ai-sun{position:absolute;left:calc(50% + 104px);top:calc(50% - 128px);width:22px;height:22px;border-radius:50%;background:#F2A93B;box-shadow:0 0 0 6px rgba(242,169,59,.12)}
+.ai-sun::before{content:"";position:absolute;left:50%;top:50%;width:190px;height:190px;margin:-95px 0 0 -95px;border-radius:50%;background:radial-gradient(closest-side,rgba(242,169,59,.38),rgba(242,169,59,.14) 45%,rgba(242,169,59,0));animation:aiGlow 6s ease-in-out infinite alternate;pointer-events:none}
+@keyframes aiSky{from{transform:translateY(8%)}to{transform:translateY(-8%)}}
+@keyframes aiCloud{from{transform:translateX(-45px)}to{transform:translateX(55px)}}
+@keyframes aiGlow{from{transform:scale(.9);opacity:.8}to{transform:scale(1.15);opacity:1}}
+@media (prefers-reduced-motion:reduce){.ai-orb i,.ai-sun::before{animation:none}}
+@media (max-width:760px){.ai-orb{width:170px;height:170px}.ai-sun{left:calc(50% + 74px);top:calc(50% - 98px)}}
+ul.pts li{color:var(--ink);font-weight:500}
+details.more-d{margin-top:18px;border-top:1px solid rgba(20,10,50,.12);border-bottom:1px solid rgba(20,10,50,.12)}
+details.more-d summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;padding:14px 0;font-weight:600;color:#1A1530}
+details.more-d summary::-webkit-details-marker{display:none}
+details.more-d summary::after{content:"+";display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;background:rgba(74,53,160,.1);color:#4A35A0;font-weight:500;transition:transform .2s}
+details.more-d[open] summary::after{transform:rotate(45deg)}
+details.more-d p{margin:0 0 12px;color:var(--ink2);font-size:.98rem;line-height:1.6}
+details.more-d summary:focus-visible{outline:2px solid #5B37E8;outline-offset:3px;border-radius:6px}
+
+/* minimal: bez kart pod ilustracjami */
+#jak-pomagamy ~ .sec .ill,#jak-pomagamy .ill{background:none;overflow:visible;border-radius:0}
+
+/* hero jasny, minimalny */
+.hero{background:linear-gradient(180deg,#FFFFFF 0%,#F8F6FF 100%);color:#1A1530}
+.hero h1{color:#1A1530}
+.hero .grad{background:none;-webkit-background-clip:initial;background-clip:initial;color:#4A35A0}
+.hero .lead{color:#3F3860}
+.hero .alt{color:#4A35A0}
+.hero .meta,.hero .meta b{color:#1A1530}
+.hero .eyb{color:#5B37E8}.hero .eyb::before{background:#5B37E8}
+.hero-orb{perspective:none}
+.hero-orb .ai-stage{position:absolute;inset:0}
+.hero-orb .ai-orb{position:absolute;width:360px;height:360px;left:50%;top:50%;margin:-180px 0 0 -180px;box-shadow:0 50px 120px -30px rgba(91,55,232,.45)}
+.hero-orb .ai-orb .c1{width:380px;height:100px;top:150px;left:-70px}
+.hero-orb .ai-orb .c2{width:290px;height:84px;top:212px;right:-80px}
+.hero-orb .ai-orb .c3{width:250px;height:72px;top:84px;left:-30px}
+.hero-orb .ai-orb .hl{width:230px;height:230px;top:-60px;right:-60px}
+.hero-orb .ai-sun{left:calc(50% + 150px);top:calc(50% - 190px)}
+@media (max-width:760px){.hero-orb .ai-orb{width:220px;height:220px;margin:-110px 0 0 -110px}.hero-orb .ai-orb .c1{width:240px;height:64px;top:92px}.hero-orb .ai-orb .c2{width:180px;height:54px;top:128px}.hero-orb .ai-orb .c3{width:160px;height:46px;top:50px}.hero-orb .ai-orb .hl{width:140px;height:140px}.hero-orb .ai-sun{left:calc(50% + 92px);top:calc(50% - 122px)}}
+/* krok 01: odpowiedź AI */
+.ans{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:min(340px,90%)}
+.ans-q{margin:0 0 14px auto;max-width:80%;background:#1A1530;color:#fff;border-radius:18px 18px 4px 18px;padding:12px 16px;font-size:.95rem;line-height:1.4}
+.ans-a{background:#fff;border-radius:18px 18px 18px 4px;padding:16px 18px;box-shadow:0 24px 50px -20px rgba(42,27,110,.35)}
+.ans-l{display:block;font-size:.75rem;font-weight:600;color:#4A35A0;margin-bottom:8px}
+.ans-a p{margin:0 0 6px;color:#1A1530;font-weight:500}
+.ans-you{display:flex;align-items:center;gap:8px;color:#8B84A8!important;border:1px dashed rgba(74,53,160,.35);border-radius:10px;padding:6px 10px;margin-top:8px!important}
+.ans-dot{width:10px;height:10px;border-radius:50%;background:#F2A93B;flex:none}
+
+/* chmury jak akwarela: miękkie plamy zmieniają kształt i płyną */
+.ai-orb .c1,.ai-orb .c2,.ai-orb .c3,.ai-orb .c4{filter:blur(14px)}
+.ai-orb .c1{animation:blobA 11s ease-in-out infinite alternate}
+.ai-orb .c2{animation:blobB 14s ease-in-out infinite alternate}
+.ai-orb .c3{animation:blobC 17s ease-in-out infinite alternate}
+.ai-orb .c4{width:60%;height:28%;left:30%;top:62%;background:rgba(255,255,255,.6);border-radius:50%;animation:blobB 9s ease-in-out infinite alternate-reverse}
+.ai-orb .tx{inset:0;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.55'/%3E%3C/svg%3E");opacity:.22;mix-blend-mode:soft-light}
+@keyframes blobA{0%{transform:translate(-50px,6px) scale(1,1);border-radius:46% 54% 60% 40%/50% 42% 58% 50%}50%{transform:translate(10px,-10px) scale(1.15,.9);border-radius:60% 40% 45% 55%/40% 60% 40% 60%}100%{transform:translate(60px,8px) scale(.95,1.15);border-radius:40% 60% 55% 45%/58% 45% 55% 42%}}
+@keyframes blobB{0%{transform:translate(40px,-6px) scale(1);border-radius:55% 45% 40% 60%/45% 55% 45% 55%}100%{transform:translate(-55px,12px) scale(1.2,.85);border-radius:42% 58% 60% 40%/60% 40% 58% 42%}}
+@keyframes blobC{0%{transform:translate(-30px,10px) rotate(-6deg)}100%{transform:translate(50px,-14px) rotate(8deg) scale(1.1)}}
+/* karty wypływają przy przewijaniu i lekko unoszą się */
+html.js .ans-q,html.js .ans-a,html.js .tag,html.js .check{opacity:0}
+html.js .in .ans-q,html.js .in .ans-a,html.js .in .tag,html.js .in .check{animation:rise .9s cubic-bezier(.2,.7,.2,1) both,bob 6s ease-in-out infinite alternate}
+html.js .in .ans-q{animation-delay:0s,.9s}
+html.js .in .ans-a{animation-delay:.18s,1.1s}
+html.js .in .t1{animation-delay:0s,.9s}
+html.js .in .t2{animation-delay:.2s,1.3s}
+html.js .in .check{animation-delay:.1s,1s}
+@keyframes rise{from{opacity:0;translate:0 48px}to{opacity:1;translate:0 0}}
+@keyframes bob{from{opacity:1;translate:0 0}to{opacity:1;translate:0 -9px}}
+@media (prefers-reduced-motion:reduce){html.js .ans-q,html.js .ans-a,html.js .tag,html.js .check{opacity:1;animation:none!important}.ai-orb i{animation:none!important}}
+
+/* 31.10: większe logo i wyższy pasek */
+.logo-svg{height:30px}
+.site-h{padding:22px 0}
+.site-h.solid{padding:15px 0}
+@media (max-width:760px){.logo-svg{height:27px}}
+
+/* 31.10: zaufanie bez kółek i kart */
+.trust .tc{background:none!important;border:0!important;box-shadow:none!important;border-radius:0!important;padding:22px 0 0!important;border-top:1px solid rgba(20,10,50,.14)!important}
+.trust .tc .orb{display:none}
+.trust .tk{display:block;font-family:var(--disp);font-weight:600;font-size:clamp(1.9rem,3.4vw,2.5rem);letter-spacing:-.02em;color:#4A35A0;line-height:1.05;margin:0 0 14px}
+.trust .tc h3{margin:0 0 8px}
+
+/* 31.10: granatowa sekcja zaufania */
+.sec.navy{background:#120D26;padding-top:24px}
+.sec.navy .w{border-top:1px solid rgba(255,255,255,.12);padding-top:56px}
+.sec.navy h2{color:#fff}
+.sec.navy .num{color:#B9A6FF}
+.sec.navy .trust .tc{border-top-color:rgba(255,255,255,.18)!important}
+.sec.navy .trust .tk{color:#fff}
+.sec.navy .trust .tc h3{color:#C9BCFF}
+.sec.navy .trust .tc p{color:#CFC9E6}
+
+/* 31.10: Safari – twarde przycięcie kuli do koła */
+.ai-orb{clip-path:circle(50% at 50% 50%);-webkit-clip-path:circle(50% at 50% 50%);-webkit-mask-image:-webkit-radial-gradient(white,black);transform:translateZ(0)}
+
+/* 31.10: spokojniej – biel, granat, jeden bursztyn */
+.btn-a{background:#F2A93B;box-shadow:none}
+.btn-a:hover{background:#E99A26;box-shadow:none}
+.top nav .btn-a{background:#1A1530;color:#fff!important}
+.top nav .btn-a:hover{background:#2E2850}
+.hero{background:#fff}
+.hero .grad{color:#1A1530}
+.hero .eyb{color:#6B6488}.hero .eyb::before{background:#6B6488}
+.hero .alt{color:#1A1530}
+
+/* 31.10: problem – lista sklepów zamiast filmu */
+.ill.rank{background:none;overflow:visible;display:flex;align-items:center;justify-content:center;min-height:440px}
+.rk{width:min(440px,100%)}
+.rk-h{margin:0 0 14px;font-size:.85rem;font-weight:600;color:#4A35A0}
+.rk-row{display:flex;justify-content:space-between;align-items:center;background:#fff;border-radius:18px;padding:20px 24px;margin-bottom:12px;box-shadow:0 18px 40px -22px rgba(42,27,110,.4);font-size:1.15rem;color:#1A1530}
+.rk-row span{font-weight:600;display:flex;align-items:center;gap:10px}
+.rk-row b{font-family:var(--disp);font-weight:600;font-size:1.35rem}
+.rk-you{background:transparent;box-shadow:none;border:1.5px dashed rgba(74,53,160,.35);color:#8B84A8}
+.rk-you i{width:12px;height:12px;border-radius:50%;background:#F2A93B;display:inline-block}
+.rk-you b{color:#1A1530}
+.rk-note{margin:10px 0 0;font-size:.95rem;color:#3F3860}
+html.js .rk-row,html.js .rk-note{opacity:0}
+html.js .in .rk-row,html.js .in .rk-note{animation:rise .8s cubic-bezier(.2,.7,.2,1) both}
+html.js .in .r2{animation-delay:.15s}html.js .in .r3{animation-delay:.3s}
+html.js .in .rk-you{animation:riseFade 1s cubic-bezier(.2,.7,.2,1) .6s both}
+html.js .in .rk-note{animation-delay:1.1s}
+@keyframes riseFade{from{opacity:0;translate:0 48px}to{opacity:.85;translate:0 0}}
+@media (prefers-reduced-motion:reduce){html.js .rk-row,html.js .rk-note{opacity:1;animation:none!important}}
+@media (max-width:760px){.ill.rank{min-height:0;margin-bottom:28px}.rk-row{padding:16px 18px;font-size:1.02rem}.rk-row b{font-size:1.15rem}}
+
+/* 31.10 wieczór: większe grafiki, problem bez grafiki, na telefonie grafika pod tekstem */
+#problem .row{grid-template-columns:1fr;max-width:760px}
+.ill.big{height:auto;min-height:460px;display:flex;align-items:center;justify-content:center;background:none;overflow:visible}
+.ill.big .rk,.ill.big .pg,.ill.big .plan{width:min(460px,100%)}
+.ill.big .ans-q{margin:0 0 18px auto;max-width:85%;background:#1A1530;color:#fff;border-radius:20px 20px 4px 20px;padding:14px 18px;font-size:1.05rem;line-height:1.4}
+.pg-card{background:#fff;border-radius:20px;padding:24px 26px;box-shadow:0 18px 40px -22px rgba(42,27,110,.4)}
+.pg-n{margin:0 0 8px;font-weight:600;color:#1A1530;font-size:1.1rem}
+.pg-p{margin:0 0 12px;font-family:var(--disp);font-weight:600;font-size:2.2rem;color:#1A1530;line-height:1}
+.pg-p s{font-family:var(--body);font-size:1rem;font-weight:400;color:#8B84A8;margin-left:8px}
+.pg-l{margin:0;padding:10px 12px;border-radius:10px;background:rgba(242,169,59,.14);border:1.5px solid rgba(242,169,59,.6);color:#1A1530;font-size:.95rem}
+.pg-ai{display:flex;justify-content:space-between;align-items:center;margin-top:14px;background:#1A1530;color:#fff;border-radius:20px;padding:18px 24px}
+.pg-tag{font-size:.9rem;color:#C9BCFF;font-weight:600}
+.pg-ai b{font-family:var(--disp);font-size:1.8rem;font-weight:600;text-decoration:line-through;text-decoration-color:#F2A93B;text-decoration-thickness:3px}
+.plan .pl-row{display:flex;align-items:center;gap:16px;background:#fff;border-radius:18px;padding:18px 22px;margin-bottom:12px;box-shadow:0 18px 40px -22px rgba(42,27,110,.4);font-size:1.1rem;font-weight:600;color:#1A1530}
+.plan .pl-row em{font-style:normal;flex:none;width:34px;height:34px;border-radius:50%;background:#1A1530;color:#fff;display:flex;align-items:center;justify-content:center;font-size:.95rem}
+.plan .pl-row:nth-of-type(2) em{background:#F2A93B;color:#1A1530}
+html.js .pg-card,html.js .pg-ai,html.js .pl-row,html.js .ill.big .ans-q{opacity:0}
+html.js .in .pg-card,html.js .in .pg-ai,html.js .in .pl-row,html.js .in .ans-q{animation:rise .8s cubic-bezier(.2,.7,.2,1) both}
+html.js .in .pg-ai{animation-delay:.35s}
+html.js .in .pl-row:nth-of-type(3){animation-delay:.12s}html.js .in .pl-row:nth-of-type(4){animation-delay:.24s}html.js .in .pl-row:nth-of-type(5){animation-delay:.36s}
+html.js .in .rk .r1{animation-delay:.25s}html.js .in .rk .r2{animation-delay:.4s}html.js .in .rk .r3{animation-delay:.55s}html.js .in .rk .rk-you{animation-delay:.85s}html.js .in .rk .rk-note{animation-delay:1.3s}
+@media (prefers-reduced-motion:reduce){html.js .pg-card,html.js .pg-ai,html.js .pl-row,html.js .ill.big .ans-q{opacity:1;animation:none!important}}
+@media (max-width:760px){.row .ill,.row.rev .ill{order:2}.ill.big{min-height:0;margin-top:8px}.pg-p{font-size:1.8rem}.plan .pl-row,.rk-row{padding:15px 18px;font-size:1rem}}
+
+/* 31.10 noc: kroki bez grafik – sama typografia */
+.sec.step{background:#fff!important;padding:72px 0}
+.sec.step .row{grid-template-columns:200px minmax(0,640px);gap:48px;align-items:start;border-top:1px solid rgba(20,10,50,.12);padding-top:56px}
+.sec.step .bign{font-family:var(--disp);font-weight:600;font-size:clamp(4rem,9vw,7.5rem);line-height:.9;letter-spacing:-.04em;color:#E6E1FA}
+.sec.step .num{color:#4A35A0}
+.sec.step + .sec.step{padding-top:0}
+@media (max-width:760px){.sec.step{padding:48px 0}.sec.step .row{grid-template-columns:1fr;gap:6px;padding-top:36px}.sec.step .bign{font-size:4rem;order:0!important}}
+#problem .row{grid-template-columns:200px minmax(0,640px)!important;gap:48px;max-width:none}
+#problem .row>div{grid-column:2}
+@media (max-width:760px){#problem .row{grid-template-columns:1fr!important}#problem .row>div{grid-column:1}}
+
+/* 31.10: nasycona czerń tekstu w jasnych sekcjach */
+.hero h1,.sec:not(.navy) h2,.sec:not(.navy) h3,.faq summary,.hero .meta,.hero .meta b,ul.pts li,details.more-d summary{color:#0A0A0A}
+.hero .lead,.sec:not(.navy) .lead,details.more-d p,.faq details p{color:#3A3A3A}
+.sec.step .bign{color:#ECEAF2}
+.hero h1 .grad{color:#4A35A0}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="w">
+    <a href="https://aiona.com.pl/" class="logo" aria-label="Aiona, strona główna"><svg class="logo-svg" viewBox="-6 -32 496 150" aria-hidden="true" focusable="false"><circle cx="44" cy="-14" r="12" fill="#F2A93B"/><polyline points="4,110 44,10 84,110" fill="none" stroke="#7C5CFC" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/><line x1="21" y1="70" x2="67" y2="70" stroke="#7C5CFC" stroke-width="15" stroke-linecap="round"/><line x1="122" y1="10" x2="122" y2="110" stroke="#7C5CFC" stroke-width="15" stroke-linecap="round"/><ellipse cx="206" cy="60" rx="48" ry="50" fill="none" stroke="currentColor" stroke-width="15"/><polyline points="290,110 290,10 365,110 365,10" fill="none" stroke="currentColor" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/><polyline points="399,110 439,10 479,110" fill="none" stroke="currentColor" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/><line x1="416" y1="70" x2="462" y2="70" stroke="currentColor" stroke-width="15" stroke-linecap="round"/></svg></a>
+    <nav aria-label="Nawigacja">
+      <a href="https://aiona.com.pl/">Pozycjonowanie w AI</a>
+      <a href="https://aiona.com.pl/aiona-reklama-chatgpt.html?zrodlo=sklepy">Reklama w ChatGPT</a>
+      <a href="#problem" aria-current="page">Dla e-commerce</a>
+      <a href="https://aiona.com.pl/automatyzacja-procesow.html">Automatyzacja</a>
+      <a href="https://aiona.com.pl/wiedza.html">Baza wiedzy</a>
+      <a href="#raport" class="btn btn-a">Zamów raport</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="w">
+    <div>
+      <div class="eyb">Dla e-commerce</div>
+      <h1>Czy AI poleca produkty<br><span class="grad">z Twojego sklepu?</span></h1>
+      <p class="lead">Klienci pytają asystentów (np. ChatGPT, Gemini, Claude), gdzie kupić wybrany produkt. Sprawdzamy, czy wskazuje Twój sklep i podaje właściwą cenę, a potem mówimy, co poprawić.</p>
+      <a class="btn btn-a" href="#raport">Zamów raport</a>
+      <a class="alt" href="#za-darmo">albo sprawdź 1 produkt za darmo</a>
+      <div class="meta"><b>ChatGPT, Perplexity, Gemini</b> · <b>560 zł</b> · <b>3 dni robocze albo zwrot</b></div>
+    </div>
+    <div class="scene hero-orb" aria-hidden="true"><div class="ai-stage"><div class="ai-orb"><i class="sky"></i><i class="c1"></i><i class="c2"></i><i class="c3"></i><i class="c4"></i><i class="tx"></i><i class="hl"></i></div><span class="ai-sun"></span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="problem">
+  <div class="w row">
+    <div>
+      <div class="num">PROBLEM</div>
+      <h2>AI wybiera sklep za Twojego klienta.</h2>
+      <p class="lead">Klient pyta.<br>Asystent pokazuje kilka sklepów.<br>Reszty klient już nie szuka.</p>
+      <ul class="pts">
+        <li>Twój sklep może zostać pominięty, nawet przy najniższej cenie.</li>
+        <li>Albo pokazany z ceną sprzed promocji.</li>
+        <li>Takiej straty nie widać w statystykach sklepu.</li>
+      </ul>
+      <a class="more" href="https://aiona.com.pl/wiedza.html#sklepy-ai">Dowiedz się więcej: jak czaty wybierają sklepy</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec step" id="jak-pomagamy">
+  <div class="w row">
+    <div class="bign" aria-hidden="true">01</div>
+    <div>
+      <div class="num">SPRAWDZAMY</div>
+      <h2>Widzimy Twój sklep oczami AI.</h2>
+      <p class="lead">Zadajemy pytania kupujących o 10 Twoich produktów w trzech popularnych asystentach.</p>
+      <ul class="pts"><li>Czy Twój sklep pojawia się w odpowiedziach.</li><li>Komu oddaje klienta, gdy Cię pomija.</li><li>Każda odpowiedź z datą i źródłem.</li></ul>
+      <details class="more-d">
+        <summary>Dowiedz się więcej</summary>
+          <p>Dla każdego z 10 produktów zadajemy pytania, które zadaje kupujący: o polecenie, o porównanie z innymi i o cenę i dostępność.</p>
+          <p>Pytamy trzy modele z wyszukiwaniem w internecie: GPT, Gemini i Perplexity.</p>
+          <p>Przy każdej odpowiedzi zapisujemy, czy odpowiedź wymienia Twój sklep, jaką cenę i dostępność podaje, jakie sklepy poleca zamiast Ciebie i z jakich stron bierze informacje.</p>
+          <p>Odpowiedzi czatów się zmieniają, dlatego każda ma datę.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="sec step">
+  <div class="w row">
+    <div class="bign" aria-hidden="true">02</div>
+    <div>
+      <div class="num">WYJAŚNIAMY</div>
+      <h2>Mówimy, skąd biorą się błędy.</h2>
+      <p class="lead">Przy każdym produkcie wskazujemy konkretną przyczynę.</p>
+      <ul class="pts"><li>Dostęp robotów AI do strony.</li><li>Ceny i oceny czytelne dla maszyn.</li><li>Co poprawić najpierw.</li></ul>
+      <details class="more-d">
+        <summary>Dowiedz się więcej</summary>
+          <p>Sprawdzamy najczęstsze przyczyny: czy roboty AI mają dostęp do strony (robots.txt i zapora), czy cena i dostępność są zapisane w danych produktu czytelnych dla maszyn, czy oceny i parametry produktu są widoczne dla modeli. Sprawdzamy też wiele innych przyczyn.</p>
+          <p>Częsty przypadek to cena promocyjna: model odczytuje linijkę „najniższa cena z 30 dni” jako aktualną cenę i podaje klientowi wyższą kwotę.</p>
+          <p>Przy każdym produkcie dostajesz jedną konkretną przyczynę, a nie listę ogólnych porad.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="sec step">
+  <div class="w row">
+    <div class="bign" aria-hidden="true">03</div>
+    <div>
+      <div class="num">POPRAWIAMY</div>
+      <h2>Dostajesz plan albo gotowe poprawki.</h2>
+      <p class="lead">Tworzymy gotową do wdrożenia listę zadań dla Ciebie, Twojego informatyka lub agencji. Jeżeli chcesz, możemy również sami wdrożyć zalecane poprawki.</p>
+      <ul class="pts"><li>Kolejność według wpływu na sprzedaż.</li><li>Rada, kiedy wprowadzać promocje.</li><li>Wdrożenie na życzenie, wycena osobno.</li></ul>
+      <details class="more-d">
+        <summary>Dowiedz się więcej</summary>
+          <p>Zadania układamy według wpływu na sprzedaż: najpierw to, co najbardziej szkodzi, na przykład zablokowane roboty albo błędna cena.</p>
+          <p>Każde zadanie jest opisane tak, żeby mógł je wykonać Ty, Twój informatyk albo agencja, bez dodatkowych pytań.</p>
+          <p>Podpowiadamy też, kiedy wprowadzać promocje, żeby czat nie podawał klientom starej ceny.</p>
+          <p>Jeśli chcesz, wdrażamy poprawki sami. Wdrożenie wyceniamy osobno, po raporcie.</p>
+          <p><a class="more" href="https://aiona.com.pl/wiedza.html#sklepy-ai">Artykuł: widoczność sklepu w AI</a></p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="offer" id="raport">
+  <div class="w row">
+    <div>
+      <div class="num">RAPORT</div>
+      <h2>10 produktów.<br>3 asystentów AI.</h2>
+      <p class="price"><span class="grad">560 zł</span><small>jednorazowo</small></p>
+      <ul class="pts">
+        <li>Które produkty asystenci pomijają i komu oddają klienta.</li>
+        <li>Gdzie odpowiedź podaje złą cenę lub dostępność.</li>
+        <li>Przyczyna przy każdym produkcie.</li>
+        <li>Lista poprawek od najważniejszej.</li>
+      </ul>
+      <p class="gw">3 dni robocze albo zwracamy 560 zł.</p>
+      <p class="fine">Gwarancja dotyczy terminu. Jeśli w ciągu 30 dni od raportu zdecydujesz się na wdrożenie poprawek albo reklamę w ChatGPT, koszt raportu odliczamy od ich ceny.</p>
+    </div>
+    <div class="form">
+      <form id="orderForm" action="https://formspree.io/f/xykvlddn" method="POST">
+        <input type="hidden" name="_subject" value="[PŁATNE 560 zł] Zamówienie raportu sklepu: 10 produktów">
+        <input type="hidden" name="typ_zgloszenia" value="zamowienie-raport-sklep">
+        <input type="hidden" name="temat" value="pelny-raport-sklep">
+        <input type="hidden" name="zrodlo" id="oZrodlo" value="sklepy-bezposrednio">
+        <div class="fi"><label for="on">Imię</label><input type="text" id="on" name="imie" required autocomplete="given-name"></div>
+        <div class="fi"><label for="oe">E-mail</label><input type="email" id="oe" name="email" required autocomplete="email"></div>
+        <div class="fi"><label for="od">Adres sklepu</label><input type="text" id="od" name="domena" required placeholder="twojsklep.pl" inputmode="url"></div>
+        <div class="fi"><label for="op">Platforma sklepu</label>
+          <select id="op" name="platforma"><option value="">Wybierz albo pomiń</option><option>Shoper</option><option>WooCommerce</option><option>PrestaShop</option><option>IdoSell</option><option>Shopify</option><option>Inna</option><option>Nie wiem</option></select></div>
+        <div class="fi"><label for="om">Które produkty? (opcjonalnie)</label><textarea id="om" name="wiadomosc" placeholder="Linki albo nazwy. Jeśli pominiesz, wybierzemy sami."></textarea></div>
+        <button type="submit" class="btn btn-a">Zamawiam raport</button>
+        <p class="sent" id="oOk" role="status">Zamówienie wysłane. Odpiszemy mailem z potwierdzeniem.</p>
+        <p class="err" id="oErr" role="alert"></p>
+        <p class="fine2">Wysyłając akceptujesz <a href="polityka.html">politykę prywatności</a> i <a href="regulamin.html">regulamin</a>.</p>
+      </form>
+      <details class="free" id="za-darmo">
+        <summary>Nie masz pewności? Sprawdzimy 1 produkt za darmo</summary>
+        <form id="freeForm" action="https://formspree.io/f/xykvlddn" method="POST">
+          <input type="hidden" name="_subject" value="[DARMOWE] Sprawdzenie 1 produktu sklepu">
+          <input type="hidden" name="typ_zgloszenia" value="darmowe-sprawdzenie-produktu">
+          <input type="hidden" name="temat" value="sklep-1-produkt">
+          <input type="hidden" name="zrodlo" class="js-zrodlo" value="sklepy-bezposrednio">
+          <div class="fi"><label for="fp">Link do produktu</label><input type="url" id="fp" name="produkt" required placeholder="https://twojsklep.pl/produkt"></div>
+          <div class="fi"><label for="fe2">E-mail</label><input type="email" id="fe2" name="email" required autocomplete="email"></div>
+          <div class="hp" aria-hidden="true"><label for="fw">Zostaw puste</label><input type="text" id="fw" name="_gotcha" tabindex="-1" autocomplete="off"></div>
+          <button type="submit" class="btn btn-s">Wyślij link</button>
+          <p class="sent" id="fOk" role="status">Mamy to. Wynik wyślemy w ciągu 3 dni roboczych.</p>
+          <p class="err" id="fErr" role="alert"></p>
+        </form>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="sec navy">
+  <div class="w">
+    <div class="num">DLACZEGO NAM ZAUFAĆ</div>
+    <div class="trust">
+      <div class="tc"><b class="tk">3 dni</b><h3>Termin albo zwrot.</h3><p>Raport w 3 dni robocze. Jeśli się spóźnimy, zwracamy środki.</p></div>
+      <div class="tc"><b class="tk">Data i źródło</b><h3>Wszystko do sprawdzenia.</h3><p>Każda odpowiedź w raporcie ma datę i źródło. Możesz ją powtórzyć sam.</p></div>
+      <div class="tc"><b class="tk">Przyczyna</b><h3>Wiesz, co poprawić.</h3><p>Pokazujemy, które sklepy asystenci polecają zamiast Twojego i dlaczego, oraz co poprawić, żeby to zmienić.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec alt" id="pytania">
+  <div class="w"><div class="faq">
+    <div class="num">PYTANIA</div>
+    <h2 style="margin-bottom:26px">Najczęstsze pytania.</h2>
+    <details><summary>Co gwarantujecie?</summary><p>Termin raportu: 3 dni robocze albo zwracamy 560 zł. Każda informacja w raporcie ma datę i źródło, więc możesz ją sprawdzić sam.</p></details>
+    <details><summary>Jak długo to trwa?</summary><p>Raport dostajesz w ciągu 3 dni roboczych od zamówienia. Jeśli się spóźnimy, zwracamy 560 zł.</p></details>
+    <details><summary>Czy sami wdrażacie poprawki?</summary><p>Tak, jeśli chcesz. Po raporcie wyceniamy wdrożenie osobno. Możesz też przekazać listę poprawek swojemu informatykowi albo agencji.</p></details>
+    <details><summary>Czym to się różni od reklamy w ChatGPT?</summary><p>Reklama to płatne miejsce w odpowiedziach i widzą ją tylko użytkownicy planów Free i Go. Raport dotyczy naturalnych odpowiedzi czatu, na które reklama nie wpływa. <a href="https://aiona.com.pl/aiona-reklama-chatgpt.html">O reklamie w ChatGPT</a></p></details>
+    <details><summary>Dla jakich sklepów to ma sens?</summary><p>Dla sklepów z produktami, które klienci porównują przed zakupem i które są dostępne też u konkurencji. Nie prowadzimy kampanii dla branży medycznej, finansowej i prawnej.</p></details>
+    <a class="more" href="https://aiona.com.pl/wiedza.html#sklepy-ai">Więcej w Bazie wiedzy</a>
+  </div></div>
+</section>
+
+</main>
+
+<footer>
+  <div class="w">
+    <div class="ft">
+      <a href="https://aiona.com.pl/">Strona główna</a>
+      <a href="https://aiona.com.pl/aiona-reklama-chatgpt.html">Reklama w ChatGPT</a>
+      <a href="https://aiona.com.pl/automatyzacja-procesow.html">Automatyzacja</a>
+      <a href="https://aiona.com.pl/wiedza.html">Baza wiedzy</a>
+      <a href="https://aiona.com.pl/polityka.html">Polityka prywatności</a>
+      <a href="https://aiona.com.pl/regulamin.html">Regulamin</a>
+      <a href="#ustawienia-cookies" data-cookie-settings>Ustawienia cookies</a>
+      <a href="mailto:kontakt@aiona.com.pl">kontakt@aiona.com.pl</a>
+    </div>
+    <p>© 2026 Aiona. Ostatnia aktualizacja strony: 31 października 2026.</p>
+    <p>Aiona jest niezależną firmą i nie jest powiązana z OpenAI. ChatGPT i OpenAI są znakami towarowymi OpenAI.</p>
+  </div>
+</footer>
+
+<script>
+// Źródło wejścia: zrodlo + utm_* (domyślnie „sklepy-bezposrednio”, żeby odróżnić od landingu reklamy)
+var AIONA_SRC = (function(){
+  var p = new URLSearchParams(location.search), out = [];
+  var z = p.get('oppref') ? 'reklama-chatgpt-potwierdzone' : (p.get('zrodlo') || 'sklepy-bezposrednio');
+  out.push('zrodlo=' + z);
+  ['utm_source','utm_medium','utm_campaign','utm_content'].forEach(function(k){ if(p.get(k)) out.push(k+'='+p.get(k)); });
+  return { zrodlo: z, utm: out.join('|').slice(0,300), p: p };
+})();
+
+// Darmowe sprawdzenie 1 produktu → Formspree (ręczna obsługa)
+(function(){
+  var f = document.getElementById('freeForm');
+  if(!f) return;
+  f.querySelector('.js-zrodlo').value = AIONA_SRC.zrodlo;
+  ['utm_source','utm_medium','utm_campaign','utm_content'].forEach(function(k){
+    var val = AIONA_SRC.p.get(k); if(!val) return;
+    var el = document.createElement('input'); el.type = 'hidden'; el.name = k; el.value = val.slice(0,100); f.appendChild(el);
+  });
+  f.addEventListener('submit', async function(e){
+    e.preventDefault();
+    var btn = f.querySelector('button[type=submit]'), err = document.getElementById('fErr');
+    err.textContent = '';
+    if(document.getElementById('fw').value) return;
+    if(!f.checkValidity()){ f.reportValidity(); return; }
+    btn.disabled = true; btn.textContent = 'Wysyłam...';
+    try {
+      var res = await fetch(f.action, { method: 'POST', body: new FormData(f), headers: { 'Accept': 'application/json' } });
+      if(!res.ok) throw new Error('status ' + res.status);
+      f.querySelectorAll('.fi').forEach(function(el){ el.hidden = true; });
+      btn.hidden = true;
+      document.getElementById('fOk').style.display = 'block';
+      if(window.oaiq){ oaiq('measure', 'lead_created', { type: 'customer_action' }); }
+      if(window.fbq){ fbq('track', 'Lead', {content_name: 'sklep_1_produkt'}); }
+      if(window.aionaConsent && aionaConsent.analytics){ window.dataLayer = window.dataLayer || []; window.dataLayer.push({event: 'visibility_check_submit'}); }
+    } catch(x){
+      btn.disabled = false; btn.textContent = 'Sprawdźcie mój produkt';
+      err.innerHTML = 'Nie udało się wysłać. Napisz na <a href="mailto:kontakt@aiona.com.pl">kontakt@aiona.com.pl</a>.';
+    }
+  });
+})();
+
+// Zamówienie raportu dla sklepu → Formspree (ten sam formularz co kontakt na landingu)
+(function(){
+  var f = document.getElementById('orderForm');
+  if(!f) return;
+  document.getElementById('oZrodlo').value = AIONA_SRC.zrodlo;
+  ['utm_source','utm_medium','utm_campaign','utm_content'].forEach(function(k){
+    var val = AIONA_SRC.p.get(k); if(!val) return;
+    var el = document.createElement('input'); el.type = 'hidden'; el.name = k; el.value = val.slice(0,100); f.appendChild(el);
+  });
+  f.addEventListener('submit', async function(e){
+    e.preventDefault();
+    var btn = f.querySelector('button[type=submit]'), err = document.getElementById('oErr');
+    err.textContent = '';
+    if(!f.checkValidity()){ f.reportValidity(); return; }
+    btn.disabled = true; btn.textContent = 'Wysyłam...';
+    try {
+      var res = await fetch(f.action, { method: 'POST', body: new FormData(f), headers: { 'Accept': 'application/json' } });
+      if(!res.ok) throw new Error('status ' + res.status);
+      f.querySelectorAll('.fi').forEach(function(el){ el.hidden = true; });
+      btn.hidden = true;
+      document.getElementById('oOk').style.display = 'block';
+      if(window.oaiq){ oaiq('measure', 'lead_created', { type: 'customer_action' }); }
+      if(window.fbq){ fbq('track', 'Lead', {content_name: 'raport_sklep'}); }
+      if(window.aionaConsent && aionaConsent.analytics){ window.dataLayer = window.dataLayer || []; window.dataLayer.push({event: 'form_submit_success'}); }
+    } catch(x){
+      btn.disabled = false; btn.textContent = 'Zamawiam raport';
+      err.innerHTML = 'Nie udało się wysłać. Napisz na <a href="mailto:kontakt@aiona.com.pl">kontakt@aiona.com.pl</a>.';
+    }
+  });
+})();
+</script>
+<script>
+(function(){var b=document.getElementById('tryCopy');if(!b)return;b.addEventListener('click',function(){var t=document.getElementById('tryPrompt').textContent;try{navigator.clipboard.writeText(t).then(function(){b.textContent='Skopiowano';setTimeout(function(){b.textContent='Kopiuj polecenie'},2000)})}catch(e){}});})();
+</script>
+<script>
+(function(){function openFree(){var d=document.getElementById('za-darmo');if(d){d.open=true;setTimeout(function(){d.scrollIntoView({behavior:'smooth',block:'center'});var i=document.getElementById('fp');if(i)i.focus({preventScroll:true});},60);}}
+document.querySelectorAll('a[href="#za-darmo"]').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();openFree();history.replaceState(null,'','#za-darmo');});});
+if(location.hash==='#za-darmo')openFree();})();
+</script>
+<script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "8b1cb915de0c4cf4a7d778c5a760e72c"}'></script>
+<script>
+(function(){document.documentElement.classList.add('js');
+var els=document.querySelectorAll('.ill');
+if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return;}
+var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}})},{threshold:.25});
+els.forEach(function(e){io.observe(e)});})();
+</script>
+</body>
+</html>
